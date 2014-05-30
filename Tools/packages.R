@@ -4,3 +4,7 @@ if(!require(RWiener)) {
    install.packages("RWiener"); require(RWiener)}
 if(!require(MASS)) { 
    install.packages("MASS"); require(MASS)}
+help(package="RWiener")
+
+
+
