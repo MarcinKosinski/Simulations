@@ -12,8 +12,8 @@
 #' To be written.
 #'
 #' @author
-#' Kamil Marcin Kosinski [aut]\cr
-#' Marcin Piotr Kosinski [aut, cre]
+#' Kamil Marcin Kosinski [aut] \email{kamil.kosinski@@gmail.com} \cr
+#' Marcin Piotr Kosinski [aut, cre] \email{m.p.kosinski@@gmail.com}
 #' 
 #' 
 #' @family Rpickands
