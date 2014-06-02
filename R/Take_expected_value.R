@@ -70,11 +70,13 @@ Take_expected_value <- function(interval_end=1, points=100,copy_number=1000){
 .Max_from_Wiener_on_interval <- function(interval_end=1,points=100){
    Delta <- interval_end/points
    # time increment
-
-   # Wiener process
-   W <- c( 0, cumsum( sqrt(Delta) * rnorm( points+1 ) ))
+   
    # time moments
    time <- seq( 0, interval_end, length = points+1)
+      
+   
+   # Wiener process
+   W <-  cumsum( sqrt(time) * rnorm( points + 1 ) )
    # return max of "Wiener * sqrt(2) - time moment"
    return(
       max(
@@ -82,8 +84,5 @@ Take_expected_value <- function(interval_end=1, points=100,copy_number=1000){
          )
       )
 }
-
-
-
 
 
