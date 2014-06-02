@@ -1,0 +1,13 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^devel
+^README.md$
+^\.git
+^\.gitignore$
+^vignettes/figures$
+^.*\.out
+^.*\.log
+^.*\.synctex\.gz
+^.*\.tex
+^.*-condordance\.tex
+\.directory$

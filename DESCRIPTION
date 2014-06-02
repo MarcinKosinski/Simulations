@@ -1,0 +1,16 @@
+Package: Rpickands
+Version: 0.0-1
+Date: 2014-06-02
+Title: Simulations estimating Pickands constant.
+Authors@R: c(
+    person("Kamil Marcin", "Kosinski", role = c("aut")),
+    person("Marcin Piotr", "Kosinski", role = c("aut", "cre"),
+    email = "m.p.kosinski@gmail.com")
+    )
+Depends:
+    R (>= 2.15.0),
+    parallel
+Description: Blah Blah. To be done.
+License: GPL (>= 3)
+URL: http://github.com/MarcinKosinski/Simulations
+BugReports: http://github.com/MarcinKosinski/Simulations/issues
