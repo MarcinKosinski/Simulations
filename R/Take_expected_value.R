@@ -45,7 +45,7 @@
 #' })
 #' stopCluster(cl)
 #' 
-#' @author Marcin Kosiñski, \email{m.p.kosinski@@gmail.com}
+#' @author Marcin Kosi?ski, \email{m.p.kosinski@@gmail.com}
 #' 
 #' @family Rpickands
 #' @export
@@ -76,7 +76,7 @@ Take_expected_value <- function(interval_end=1, points=100,copy_number=1000){
       
    
    # Wiener process
-   W <-  cumsum( sqrt(time) * rnorm( points + 1 ) )
+   W <-  cumsum( sqrt(Delta) * rnorm( points + 1 ) )
    # return max of "Wiener * sqrt(2) - time moment"
    return(
       max(
