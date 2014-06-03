@@ -19,7 +19,7 @@
 #' the expected values is estimated by taking a mean of those realizations.
 #' 
 #' @details
-#' Blah blah
+#' Marcin ma mala palke
 #' 
 #' 
 #' @examples
