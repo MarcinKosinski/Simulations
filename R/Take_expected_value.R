@@ -15,7 +15,7 @@
 #' should be calculated. Default is 1.
 #' @param points Tells on how many points should the maximum be estimated. Points are
 #' spread evenly.
-#' @param copy_number Determines the number of random variable realizations on which
+#' @param number_of_trajectories Determines the number of trajectory realizations on which
 #' the expected values is estimated by taking a mean of those realizations.
 #' 
 #' @details
@@ -50,13 +50,13 @@
 #' @family Rpickands
 #' @export
 #' @rdname Take_expected_value
-Take_expected_value <- function(interval_end=1, points=100,copy_number=1000){
+Take_expected_value <- function(interval_end = 1, points = 100, number_of_trajectories = 1000){
    return(
       mean(
          exp(
             replicate(
-               n=copy_number,
-               expr=Max_from_Wiener_on_interval(interval_end,points)
+               n = number_of_trajectories,
+               expr = Max_from_Wiener_on_interval(interval_end, points)
                )
          )
       )
@@ -67,21 +67,19 @@ Take_expected_value <- function(interval_end=1, points=100,copy_number=1000){
 
 
 # this function shall not be exported
-.Max_from_Wiener_on_interval <- function(interval_end=1,points=100){
-   Delta <- interval_end/points
+Max_from_Wiener_on_interval <- function(interval_end = 1, points = 100){
+   
    # time increment
+   Delta <- interval_end/points
    
    # time moments
-   time <- seq( 0, interval_end, length = points+1)
+   time <- seq( 0, interval_end, length = points + 1)
       
-   
    # Wiener process
    W <-  cumsum( sqrt(Delta) * rnorm( points + 1 ) )
    # return max of "Wiener * sqrt(2) - time moment"
    return(
-      max(
-         sqrt(2) * W - time
-         )
+      max(sqrt(2) * W - time)
       )
 }
 
